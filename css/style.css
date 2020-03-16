@@ -99,7 +99,7 @@
   .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
     padding: 5px;
     background:rgba(105, 99, 99, .3);
-    border: 3px solid white;
+    border: 3px solid #ffffff;
   }
   .pitt-container img{
     opacity: 1;
@@ -314,7 +314,7 @@
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
-  .home-flip:hover .home-flip-inner{
+  .home-flip:hover .home-flip-inner, .home-flip-inner:focus{
     transform: rotateY(180deg);
   }
   .home-flip-front, .home-flip-back {
@@ -329,7 +329,7 @@
     color: black;
   }
   .home-flip-back {
-    background-color: #b7bfae;
+    background-color: #f0f0f0;
     color: #2E2E2E;
     transform: rotateY(180deg);
   }
@@ -338,7 +338,7 @@
     width: 250px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
   }
   form label{
@@ -383,12 +383,12 @@
     width: 300px;
     height: 300px;
   }
-    .home-flip {
+  .home-flip {
     width: 300px;
     height: 300px;
   }
   .home-flip-back {
-    background-color: #f0f0f0;
+    background-color: #C0C0C0;
     color: #2E2E2E;
   }
   nav{
@@ -401,9 +401,8 @@
     text-shadow: 5px 5px 2px #99a090;
   }
   .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
-    padding: 0px;
     background: rgba(183,191,174, .7);
-    border: 3px solid white;
+    border: 5px solid #C0C0C0;
   }
   .home img, .england-container img, .sf img{
     width: 300px;
@@ -449,7 +448,7 @@
     grid-column: 1;
     grid-row: 3;
   }
-    .pitt-container img:nth-child(3){
+  .pitt-container img:nth-child(3){
     grid-column: 1;
     grid-row: 4;
   }
@@ -548,7 +547,7 @@
     height: 350px;
   }
   .home-flip-back {
-    background-color: #C0C0C0;
+    background-color: #f0f0f0;
     color: #2E2E2E;
   }
   p{
@@ -556,6 +555,9 @@
   }
   h1{
     text-shadow: 5px 5px 2px #ffffff;
+  }
+  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
+    border: 7px solid #ffffff;
   }
   .home img,.sf img{
     width: 600px
@@ -607,7 +609,7 @@
     grid-column: 2;
     grid-row: 3;
   }
-    .pitt-container img:nth-child(3){
+  .pitt-container img:nth-child(3){
     grid-column: 3;
     grid-row: 3;
   }
@@ -619,11 +621,11 @@
     grid-column: 2;
     grid-row: 4;
   }
-    .pitt-container img:nth-child(9){
+  .pitt-container img:nth-child(9){
     grid-column: 3;
     grid-row: 4;
   }
-    .pitt-container img:nth-child(4){
+  .pitt-container img:nth-child(4){
     grid-column: 1;
     grid-row: 5;
   }
@@ -636,9 +638,9 @@
     grid-row: 5;
   }
   .england-container{
-      grid-row-gap: 10px;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr auto;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
   }
   .england-container img{
     padding: 20px;
@@ -664,13 +666,12 @@
     width: 200px;
     transform: none;
   }
-    #logo:hover{
+  #logo:hover{
     padding: 25px;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
   }
-
   form{
     width: 700px;
   }
@@ -685,7 +686,13 @@
     -webkit-transition: none;
     transition: none;
   }
-  .pitt-container:hover{
+  nav a:hover{
+    font-weight: unset;
+  }
+  a:hover{
+    font-weight: unset;
+  }
+  .pitt-container img:hover{
     opacity: 1;
   transition: none;
   -moz-transition: none;
@@ -695,6 +702,7 @@
     padding: 0px;
     opacity: 1;
     border: none;
+    background: none;
   }
   #logo{
     -webkit-animation: none;
@@ -708,8 +716,19 @@
     transform: none;
   }
   * {
+      -webkit-animation: none;
+      animation: none;
       animation-duration: 0s;
+      -webkit-transition: none;
       transition: none;
       scroll-behavior: auto;;
+  }
+  *:hover{
+    -webkit-animation: none;
+    animation: none;
+    animation-duration: 0s;
+    -webkit-transition: none;
+    transition: none;
+    scroll-behavior: auto;
   }
 }
