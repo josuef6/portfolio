@@ -2,25 +2,6 @@
   html{
     scroll-behavior: smooth;
   }
-  header{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  #contact-back{
-    background: #000000;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #ffffff;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../contact-images/me.jpg");
-    background-repeat: no-repeat;
-  }
   body, #england-back, #sf-back, #pitt-back, #home-back{
     color: #2E2E2E;
     font-size: 10px;
@@ -28,6 +9,13 @@
     text-align: justify;
     font-family: sans-serif;
     background: #b7bfae;
+  }
+  /* Nav Bar using Flex*/
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
   }
   nav{
     text-align: left;
@@ -50,13 +38,11 @@
     margin: 0;
     padding: 0;
     color: #C0C0C0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
-
   .nav_links #current-page{
     font-weight: bold;
     color: #ffffff;
@@ -77,10 +63,11 @@
     color: black;
     text-decoration-style: solid;
   }
+  /* H's and Paragraphs */
   h1, h2{
-      text-align: center;
-      font-size: 25px;
-      padding-top: 20px
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px
   }
   h1{
     text-shadow: 5px 5px 2px #ffffff;
@@ -90,17 +77,42 @@
     text-align: center;
     padding: 20px;
   }
+  /*Text Links*/
+  a{
+    color: #0000FF;
+  }
+  a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  /*Footer*/
+  footer{
+    position: fixed-bottom;
+    width: 100%;
+    background-color: #000000;
+  }
+  footer p{
+    color: #ffffff;
+    text-align: center;
+  }
+  footer a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  /* Hover effect for Main Content on all pages */
+  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover, .contact-main:hover{
+    padding: 5px;
+    background:rgba(105, 99, 99, .3);
+    border: 3px solid #ffffff;
+  }
+  /* Images for Home, England, and San Francisco pages */
   .home img, .england-container img, .sf img{
     display: block;
     margin: 0 auto;
     width: 200px;
     padding-bottom: 10px;
   }
-  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
-    padding: 5px;
-    background:rgba(105, 99, 99, .3);
-    border: 3px solid #ffffff;
-  }
+  /* Opacity effect for images on Pittsburgh page */
   .pitt-container img{
     opacity: 1;
     transition: opacity .25s ease-in-out;
@@ -111,15 +123,7 @@
   .pitt-container img:hover{
     opacity: 0.5;
   }
-.england-container{
-    display: grid;
-    grid-row-gap: 5px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto auto auto;
-    justify-content: center;
-    align-content: center;
-    padding-bottom: 5px;
-}
+  /* Grid for Pittsburgh page */
   .pitt-container{
     display: grid;
     grid-row-gap: 5px;
@@ -131,7 +135,6 @@
   }
   .pitt-container img{
     margin: 0 auto;
-    /* padding: 5px; */
   }
   .pitt2017{
     grid-row: 1;
@@ -166,14 +169,15 @@
   .pitt-container img:nth-child(6){
     grid-row: 11;
   }
+  /* Grid for England page */
   .england-container{
-      display: grid;
-      grid-row-gap: 5px;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto auto auto;
-      justify-content: center;
-      align-content: center;
-      padding-bottom: 5px;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 5px;
   }
   .uk-main{
     grid-row: 1;
@@ -187,99 +191,63 @@
   .england-container img:nth-child(4){
     grid-row: 4;
   }
-
   *:focus{
     border: 2px solid white;
   }
-  /*Text Links*/
-  a{
-    color: #0000FF;
-  }
-  a:hover{
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  /*Footer*/
-  footer{
-    position: fixed-bottom;
-    width: 100%;
-    background-color: #000000;
-  }
-  footer p{
-    color: #ffffff;
-    text-align: center;
-  }
-  footer a{
-    color: #ffffff;
-    text-decoration: none;
-  }
-
-
+  /* "Swing" effect for logo on home page*/
+  /* Citation: https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
   @-webkit-keyframes swing{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
+    15%{
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px);
     }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
+    30%{
+      -webkit-transform: translateX(-5px);
       transform: translateX(-5px);
     }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
+    50%{
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
     }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
+    65%{
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
     }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
+    80%{
+      -webkit-transform: translateX(2px);
+      transform: translateX(2px);
     }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+    100%{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
     }
   }
   @keyframes swing{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
+    15%{
+      -webkit-transform: translateX(5px);
+      transform: translateX(5px);
     }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
+    30%{
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
     }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
+    50%{
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
     }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
+    65%{
+      -webkit-transform: translateX(-3px);
+      transform: translateX(-3px);
     }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
+    80%{
+      -webkit-transform: translateX(2px);
+      transform: translateX(2px);
     }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+    100%{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
     }
   }
-  /*Headshot Image and Card Flip*/
   #logo{
     width: 100px;
     margin-left: auto;
@@ -291,7 +259,7 @@
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
-  /* Flip Card */
+  /* Flip Card for home page */
   /* Citation: https://www.w3schools.com/howto/howto_css_flip_card.asp */
   .home-flip-front img{
     width: 200px;
@@ -333,7 +301,20 @@
     color: #2E2E2E;
     transform: rotateY(180deg);
   }
-  /* Contact Form */
+  /* Contact form page */
+  #contact-back{
+    background: #000000;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../contact-images/me.jpg");
+    background-repeat: no-repeat;
+  }
   form{
     width: 250px;
     margin: 0 auto;
@@ -353,7 +334,7 @@
   margin-bottom: 5px;
   outline-color: #ffffff;
   text-align: left;
-}
+  }
   fieldset div{
    border: 2px solid white;
    margin: 2%;
@@ -379,33 +360,9 @@
     font-size: 20px;
     background: #f0f0f0;
   }
-  .home-flip-front img{
-    width: 300px;
-    height: 300px;
-  }
-  .home-flip {
-    width: 300px;
-    height: 300px;
-  }
-  .home-flip-back {
-    background-color: #C0C0C0;
-    color: #2E2E2E;
-  }
+  /* Nav Bar using Flex */
   nav{
     padding: 20px;
-  }
-  p{
-    font-size: 15px;
-  }
-  h1{
-    text-shadow: 5px 5px 2px #99a090;
-  }
-  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
-    background: rgba(183,191,174, .7);
-    border: 5px solid #C0C0C0;
-  }
-  .home img, .england-container img, .sf img{
-    width: 300px;
   }
   nav a{
     color: #b7bfae;
@@ -425,16 +382,33 @@
     color: #a6a6a6;
     border: 2px solid #a6a6a6;
   }
-
+  /* H's and Paragraphs */
+  h1{
+    text-shadow: 5px 5px 2px #99a090;
+  }
+  p{
+    font-size: 15px;
+  }
+  /* Hover effect for main content on all pages */
+  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover, .contact-main:hover{
+    background: rgba(183,191,174, .7);
+    border: 5px solid #C0C0C0;
+  }
+  /* Images for Home, England, and San Francisco pages */
+  .home img, .england-container img, .sf img{
+    width: 300px;
+  }
+  /* Opacity effect for images on Pittsburgh page */
+  .pitt-container img{
+    border: 5px solid #a1a899;
+    width: 300px;
+  }
+  /* Grid for Pittsburgh page */
   .pitt-container{
     grid-row-gap: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr auto auto auto auto auto;
     padding-bottom: 10px;
-  }
-  .pitt-container img{
-    border: 5px solid #a1a899;
-    width: 300px;
   }
   .pitt2017{
     grid-column: 1;
@@ -480,7 +454,7 @@
     grid-column: 1 / span 2;
     grid-row: 6;
   }
-
+  /* Grid for England page */
   .england-container{
       grid-row-gap: 10px;
       grid-template-columns: 1fr 1fr;
@@ -505,6 +479,8 @@
     grid-column: 2;
     grid-row: 3;
   }
+  /* "Rotate" effect for logo on Home Page */
+  /* Citation: https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
   #logo{
     width: 150px;
     -webkit-animation: none;
@@ -518,6 +494,20 @@
     -ms-transform: rotateZ(30deg);
     transform: rotateZ(30deg);
   }
+  /* Flip Card */
+  .home-flip-front img{
+    width: 300px;
+    height: 300px;
+  }
+  .home-flip {
+    width: 300px;
+    height: 300px;
+  }
+  .home-flip-back {
+    background-color: #C0C0C0;
+    color: #2E2E2E;
+  }
+  /* Contact form page */
   form{
     width: 500px;
   }
@@ -532,36 +522,13 @@
     background: #b7bfae;
   }
 }
-
+/* Desktop */
 @media screen and (min-width: 850px){
   body, #england-back, #sf-back, #pitt-back, #home-back{
     font-size: 25px;
     background: #C0C0C0;
   }
-  .home-flip-front img{
-    width: 350px;
-    height: 350px;
-  }
-  .home-flip {
-    width: 350px;
-    height: 350px;
-  }
-  .home-flip-back {
-    background-color: #f0f0f0;
-    color: #2E2E2E;
-  }
-  p{
-    font-size: 20px;
-  }
-  h1{
-    text-shadow: 5px 5px 2px #ffffff;
-  }
-  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
-    border: 7px solid #ffffff;
-  }
-  .home img,.sf img{
-    width: 600px
-  }
+  /* Nav Bar using Flex */
   nav a{
     color: #ffffff;
   }
@@ -584,14 +551,31 @@
     border: 2px solid #545C42;
     border-radius: 30%;
   }
+  /* H's and Paragraphs */
+  h1{
+    text-shadow: 5px 5px 2px #ffffff;
+  }
+  p{
+    font-size: 20px;
+  }
+  /* Hover opacity effect for main content on all pages */
+  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover, .contact-main:hover{
+    border: 7px solid #ffffff;
+  }
+  /* Images for Home, England, and San Francisco pages */
+  .home img,.sf img{
+    width: 600px
+  }
+  /* Opacity effect for images on Pittsburgh page */
+  .pitt-container img{
+    border: 10px solid #ffffff;
+    width: 250px;
+  }
+  /* Grid for Pittsburgh page */
   .pitt-container{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr auto auto auto auto;
     padding-bottom: 20px;
-  }
-  .pitt-container img{
-    border: 10px solid #ffffff;
-    width: 250px;
   }
   .pitt2017{
     grid-column: 1 / span 3;
@@ -605,7 +589,7 @@
     grid-column: 1;
     grid-row: 3;
   }
-    .pitt-container img:nth-child(7){
+  .pitt-container img:nth-child(7){
     grid-column: 2;
     grid-row: 3;
   }
@@ -637,6 +621,7 @@
     grid-column: 3;
     grid-row: 5;
   }
+  /* Grid for England page */
   .england-container{
     grid-row-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -662,6 +647,8 @@
     grid-column: 3;
     grid-row: 2;
   }
+  /* "Grow" effect for logo on home page */
+  /* Citation: https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
   #logo{
     width: 200px;
     transform: none;
@@ -672,38 +659,58 @@
     -ms-transform: scale(1.3);
     transform: scale(1.3);
   }
+  /* Flip Card */
+  .home-flip-front img{
+    width: 350px;
+    height: 350px;
+  }
+  .home-flip {
+    width: 350px;
+    height: 350px;
+  }
+  .home-flip-back {
+    background-color: #f0f0f0;
+    color: #2E2E2E;
+  }
+  /* Contact form page */
   form{
     width: 700px;
   }
   input{
-  width: 600px;
-}
+    width: 600px;
+  }
 
 }
-
+/* Reduced Motion */
 @media screen and (prefers-reduced-motion: reduce){
+  /* Remove bold from nav bar */
+  nav a:hover{
+    font-weight: unset;
+  }
+  /* Display "Skip to Main Content" */
   .skip a{
     -webkit-transition: none;
     transition: none;
   }
-  nav a:hover{
-    font-weight: unset;
-  }
+  /* Remove bold from links */
   a:hover{
     font-weight: unset;
   }
+  /* Remove opacity effect from images on Pittsburgh page */
   .pitt-container img:hover{
     opacity: 1;
-  transition: none;
-  -moz-transition: none;
-  -webkit-transition: none;
-}
-  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover{
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+  }
+  /* Remove hover opacity effect on all pages */
+  .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover, .contact-main:hover{
     padding: 0px;
     opacity: 1;
     border: none;
     background: none;
   }
+  /* Remove Logo animation */
   #logo{
     -webkit-animation: none;
     animation: none;
@@ -715,15 +722,12 @@
     animation: none;
     transform: none;
   }
-  * {
-      -webkit-animation: none;
-      animation: none;
-      animation-duration: 0s;
-      -webkit-transition: none;
-      transition: none;
-      scroll-behavior: auto;;
+  /* Remove Flip Card effect when hovering */
+  .home-flip:hover .home-flip-inner{
+    transform: none;
   }
-  *:hover{
+  /* Remove additional motion effects */
+  *{
     -webkit-animation: none;
     animation: none;
     animation-duration: 0s;
