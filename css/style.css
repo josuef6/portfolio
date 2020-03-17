@@ -696,7 +696,7 @@
     font-weight: unset;
   }
   /* Remove opacity effect from images on Pittsburgh page */
-  .pitt-container img:hover{
+  .pitt-container img:hover, .home img, .england-container img, .sf img{
     opacity: 1;
     transition: none;
     -moz-transition: none;
