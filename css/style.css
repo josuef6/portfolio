@@ -109,18 +109,17 @@
   .home img, .england-container img, .sf img{
     display: block;
     margin: 0 auto;
-    width: 200px;
     padding-bottom: 10px;
   }
-  /* Opacity effect for images on Pittsburgh page */
-  .pitt-container img{
+  /* Opacity effect for images on all pages */
+  .pitt-container img, .home img, .england-container img, .sf img{
     opacity: 1;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
     width: 200px;
   }
-  .pitt-container img:hover{
+  .pitt-container img:hover, .home img:hover, .england-container img:hover, .sf img:hover{
     opacity: 0.5;
   }
   /* Grid for Pittsburgh page */
@@ -327,13 +326,13 @@
     font-weight: bold;
   }
   input{
-  background:#FFFFFF;
-  width: 200px;
-  border: none;
-  padding: 10px;
-  margin-bottom: 5px;
-  outline-color: #ffffff;
-  text-align: left;
+    background:#FFFFFF;
+    width: 200px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    outline-color: #ffffff;
+    text-align: left;
   }
   fieldset div{
    border: 2px solid white;
