@@ -696,11 +696,14 @@
     font-weight: unset;
   }
   /* Remove opacity effect from images on Pittsburgh page */
-  .pitt-container img:hover, .home img:hover, .england-container img:hover, .sf img:hover{
+  .pitt-container img, .home img, .england-container img, .sf img{
     opacity: 1;
     transition: none;
     -moz-transition: none;
     -webkit-transition: none;
+  }
+  .pitt-container img:hover, .home img:hover, .england-container img:hover, .sf img:hover{
+    opacity: 1;
   }
   /* Remove hover opacity effect on all pages */
   .main:hover, .uk-main:hover, .pitt2017:hover, .pitt2018:hover, .contact-main:hover{
